@@ -1,5 +1,5 @@
 # workflow name
-- name: Hello Work Workflow   
+name: Hello Work Workflow   
 
 # trigger
 on:
