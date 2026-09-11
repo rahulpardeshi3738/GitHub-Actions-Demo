@@ -19,6 +19,7 @@ jobs:
         run: echo "by!"        
 
   test_job:                         # 2nd job name
+    needs: build_job
     runs-on: ubuntu-latest          # runner
 
     steps:                    
@@ -28,6 +29,7 @@ jobs:
         run: echo "by!"        
          
   deploy_job:                       # 3rd job name
+    needs: [build_job,test_job]
     runs-on: ubuntu-latest          # runner
 
     steps:                    
@@ -35,3 +37,6 @@ jobs:
         run: echo "Hello World!"
       - name: Say by
         run: echo "by!"        
+
+
+        
