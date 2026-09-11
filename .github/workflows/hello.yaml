@@ -1,0 +1,20 @@
+# workflow name
+- name: Hello Work Workflow   
+
+# trigger
+on:
+  workflow_dispatch:   # manual trigger
+  push:
+    branches:
+      - main
+
+jobs:
+  hello_world_job:      # job name
+    runs-on: ubuntu-latest          # runner
+
+    steps:                    
+      - name: Say Hello
+        run: echo "Hello World!"
+      - name: Say by
+        run: echo "by!"        
+ 
