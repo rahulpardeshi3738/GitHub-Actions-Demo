@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  hello_world_job:      # job name
+  build_job:                        # 1st job name
     runs-on: ubuntu-latest          # runner
 
     steps:                    
@@ -17,4 +17,21 @@ jobs:
         run: echo "Hello World!"
       - name: Say by
         run: echo "by!"        
- 
+
+  test_job:                         # 2nd job name
+    runs-on: ubuntu-latest          # runner
+
+    steps:                    
+      - name: Say Hello
+        run: echo "Hello World!"
+      - name: Say by
+        run: echo "by!"        
+         
+  deploy_job:                       # 3rd job name
+    runs-on: ubuntu-latest          # runner
+
+    steps:                    
+      - name: Say Hello
+        run: echo "Hello World!"
+      - name: Say by
+        run: echo "by!"        
